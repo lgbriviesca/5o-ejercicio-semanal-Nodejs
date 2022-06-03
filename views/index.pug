@@ -1,0 +1,23 @@
+//el formato pug es diferente al html: 
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        titleDocument
+        link(rel="stylesheet" href="./styles.css")
+        
+    body
+        h1(class="title") #{title}
+        p This archive was written with pug, it's weird, isnt it? 
+        ul
+            each user in users
+                li #{user.name}
+                    p #{user.email}
+        ul
+            each repair in repairs
+                li #{repair.computerNumber}
+                    p #{repair.comments}
+        
+    script(src="./index.js")
